@@ -1687,13 +1687,13 @@ class _MovingInterval extends _AnimatedSpaceInterval
       () sync* {
         if (leftInterval != null) {
           yield leftInterval;
-          yield leftInterval.dropInterval;
+          yield leftInterval!.dropInterval;
         }
       }(),
       () sync* {
         if (rightInterval != null) {
           yield rightInterval;
-          yield rightInterval.dropInterval;
+          yield rightInterval!.dropInterval;
         }
       }(),
       createMiddle ? middleInterval?.iterable() : middle,
